@@ -12,3 +12,15 @@ export default function getMovies() {
       throw error;
     });
 }
+
+export function getGenre(){
+  return Axios.get("https://api.themoviedb.org/3/genre/movie/list?api_key=" + APIKEY + "&language=en-US")
+    .then(response => {
+      const genre = response.data.genres;
+      return genre;
+    })
+    .catch(error => {
+      console.error("Error fetching genre:", error);
+      throw error;
+    });
+}
