@@ -1,3 +1,27 @@
 .Footer-btn.active .Search-svg{
     background: linear-gradient(200deg, #FF8F71 50%, #ef2c1a 100%);
 }
+
+.Searchbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #211F30;
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    padding: 1.2rem 1.8rem;
+    margin: 5px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.Searchbar-input{
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+}
