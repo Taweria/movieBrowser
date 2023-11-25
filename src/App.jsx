@@ -1,6 +1,6 @@
 import './App.css'
 import { useState, useEffect } from 'react';
-import getMovies from './CallAPI.js';
+import getMovies from './API/GetMovies';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 
