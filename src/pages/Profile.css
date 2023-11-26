@@ -1,0 +1,12 @@
+.Working{
+    color: white;
+}
+
+.Footer-btn.active svg{
+    /* fill: linear-gradient(200deg, #FF8F71 50%, #ef2c1a 100%); */
+    fill: url(#paint0_linear_82_225);
+  }
+
+svg{
+    fill: #3D3C45;
+}

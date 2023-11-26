@@ -30,11 +30,12 @@ function SearchPage() {
     setSelectedGenre(id);
   };
 
+  console.log(movies);
   const moviesList = (filteredMovies.length > 0 ? filteredMovies : movies).map((movie) => (
     <div key={movie.id} className="Movie-div-list">
       <a href={`/Details/${movie.id}`}>
         <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt="movies-img" className="Movie-list-img" />
-        <h2 className="Movie-search-title">{movie.title}</h2>
+        <h2 className="Movie-search-title">{movie.title} <span className="Movie-date"> ({(movie.release_date).split("-")[0]}) </span></h2>
       </a>
     </div>
   ));

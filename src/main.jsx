@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import SearchPage from './pages/SearchPage.jsx'
+import ProfilePage from './pages/Profile.jsx'
 import './index.css'
 import {
   createBrowserRouter,
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "search",
     element: <SearchPage />,
+  },
+  {
+    path: "profile",
+    element: <ProfilePage />,
   },
 ]);
 
