@@ -41,6 +41,7 @@ h3{
   overflow-x: scroll;
   gap: 15px;
   padding-bottom: 20px;
+  margin-bottom: 100px;
 }
 
 .Movie-pre {

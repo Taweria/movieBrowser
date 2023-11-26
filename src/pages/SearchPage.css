@@ -30,6 +30,7 @@
     width: 100%;
     column-gap: 25px;
     row-gap: 50px;
+    margin-bottom: 180px;
 }
 
 
@@ -79,4 +80,18 @@
     background-clip: text; 
     -webkit-background-clip: text;
     color: transparent;
+}
+
+::-webkit-scrollbar {
+    height: 5px;
+    border-radius: 10px;
+  }
+  
+::-webkit-scrollbar-track {
+  background: #211F30;
+}
+  
+::-webkit-scrollbar-thumb {
+  background: #FF8F71;
+  border-radius: 10px;
 }
