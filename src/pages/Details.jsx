@@ -4,7 +4,6 @@ import './Details.css';
 import { useParams } from 'react-router-dom';
 import getOneMovie from '../API/GetOneMovie.js';
 import { useState, useEffect } from 'react';
-import Header from '../Header.jsx';
 
 export default function Details() {
     const { id } = useParams();
