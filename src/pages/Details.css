@@ -1,0 +1,105 @@
+body{
+    color: white;
+}
+
+.Movie-details-img-global{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.Movie-details-img{
+    width: 375px;
+    height: auto;
+
+}
+
+.Movie-details-play{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #FF8F71;
+    cursor: pointer;
+}
+
+.Movie-details-title-global{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Movie-details-resolution{
+    font-size: 12px;
+    padding: 5px 10px;
+    background: linear-gradient(#21202a, #21202a) padding-box, linear-gradient(125deg, grey, transparent) border-box;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+.Movie-details-rating-note-global{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #21202a;
+    padding-bottom: 20px;
+
+}
+
+.Movie-details-runtime{
+    display: flex;
+    gap: 5px;
+}
+
+.Movie-details-note{
+    display: flex;
+    gap: 2px;
+}
+
+.Movie-details-star{
+    margin-top: -4px;
+}
+
+.Movie-details-date-genre-global{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #21202a;;
+}
+
+.Movie-details-date{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Movie-details-genre{
+    width: 50%;
+}
+
+.Movie-details-genres{
+    padding: 5px;
+    background: linear-gradient(#21202a, #21202a) padding-box, linear-gradient(125deg, grey, transparent) border-box;
+    border-radius: 15px;
+    border: 2px solid transparent;
+}
+
+.Movie-details-flex{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+}
+
+.Movie-details-synopsis{
+    margin-bottom: 120px;
+}

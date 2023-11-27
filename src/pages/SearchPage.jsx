@@ -30,7 +30,6 @@ function SearchPage() {
     setSelectedGenre(id);
   };
 
-  console.log(movies);
   const moviesList = (filteredMovies.length > 0 ? filteredMovies : movies).map((movie) => (
     <div key={movie.id} className="Movie-div-list">
       <a href={`/Details/${movie.id}`}>
