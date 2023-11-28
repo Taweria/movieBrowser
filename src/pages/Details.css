@@ -7,6 +7,7 @@ body{
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .Movie-details-img{
@@ -17,13 +18,12 @@ body{
 
 .Movie-details-play{
     position: absolute;
-    top: 25%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #FF8F71;
     cursor: pointer;
 }
 
