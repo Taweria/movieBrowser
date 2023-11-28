@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../Footer.jsx';
+import Footer from '../Components/Footer.jsx';
 import './Details.css';
 import { useParams } from 'react-router-dom';
 import getOneMovie from '../API/GetOneMovie.js';
@@ -14,6 +14,7 @@ export default function Details() {
             .then(movie => setMovie(movie))
             .catch(error => console.error('Error fetching movie:', error.message));
     }, [id]);
+        
 
     const movieDetails = ((movie) => (
         <div key={movie.id} className="Movie-details">

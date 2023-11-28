@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../Header.jsx';
-import Footer from '../Footer.jsx';
+import Header from '../Components/Header.jsx';
+import Footer from '../Components/Footer.jsx';
 import './SearchPage.css';
 import Searchbar from '../Searchbar.jsx';
 import getMovies from '../API/GetMovies.js';
@@ -31,7 +31,7 @@ function SearchPage() {
     setSelectedGenre(id);
   };
 
-  const moviesList = (filteredMovies.length > 0 ? filteredMovies : movies).map((movie) => (
+  const moviesList = movies.map((movie) => (
     <div key={movie.id} className="Movie-div-list">
       <Link to={`/Details/${movie.id}`}>
         <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt="movies-img" className="Movie-list-img" />
