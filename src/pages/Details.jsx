@@ -15,8 +15,6 @@ export default function Details() {
             .catch(error => console.error('Error fetching movie:', error.message));
     }, [id]);
 
-    // console.log(movie);
-
     const movieDetails = ((movie) => (
         <div key={movie.id} className="Movie-details">
             <div className="Movie-details-img-global">
