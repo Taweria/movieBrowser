@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import getMovies from './API/GetMovies';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
+import { Link } from "react-router-dom";
 
 function App() {
   const [movies, setMovies] = useState([]);

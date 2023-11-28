@@ -5,6 +5,7 @@ import './SearchPage.css';
 import Searchbar from '../Searchbar.jsx';
 import getMovies from '../API/GetMovies.js';
 import getGenre from '../API/GetGenre.js';
+import { Link } from "react-router-dom";
 
 function SearchPage() {
   const [movies, setMovies] = useState([]);
