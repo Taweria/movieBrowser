@@ -6,7 +6,7 @@ import ProfilePage from './pages/Profile.jsx'
 import Details from './pages/Details.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
+import { HashRouter as BrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
