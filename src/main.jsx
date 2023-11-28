@@ -5,10 +5,8 @@ import SearchPage from './pages/SearchPage.jsx'
 import ProfilePage from './pages/Profile.jsx'
 import Details from './pages/Details.jsx'
 import './index.css'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 
 const router = createBrowserRouter([
   {
@@ -16,15 +14,15 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "search",
+    path: "/search",
     element: <SearchPage />,
   },
   {
-    path: "profile",
+    path: "/profile",
     element: <ProfilePage />,
   },
   {
-    path: "details/:id",
+    path: "/details/:id",
     element: <Details />,
   },
 ]);
