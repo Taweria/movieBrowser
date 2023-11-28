@@ -15,7 +15,6 @@ const AppRouter = () => {
         <Route path="/search" element={<SearchPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/details/:id" element={<Details />} />
-        {/* Add a wildcard route for unmatched routes */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
