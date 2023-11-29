@@ -10,3 +10,53 @@
 svg{
     fill: #3D3C45;
 }
+
+.Profile-img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.Profile-img-div{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.Profile-info-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Profile-settings-div{
+    background-color: #211f30;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+ul{
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+li{
+    margin: 10px;
+    display : flex; 
+    gap: 10px;
+    margin-top: 25px;
+    padding: 10px 0px;
+}
+
+.icons{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+
+.Profile-logout{
+    color: #fa6d53;
+}
