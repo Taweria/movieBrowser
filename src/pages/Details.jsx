@@ -44,7 +44,7 @@ export default function Details() {
                 </div>
                 <div className="Movie-details-note">
                     <img src={star} alt="star" className="Movie-details-star" />
-                    <span>{movie.vote_average.toFixed(1)} (IMDb)</span>
+                    <span>{movie && movie.vote_average ? movie.vote_average.toFixed(1) + ' (IMDb)' : 'N/A'}</span>
                 </div>
            </div>
             <div className="Movie-details-date-genre-global">
