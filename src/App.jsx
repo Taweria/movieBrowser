@@ -5,10 +5,11 @@ import Header from './Components/Header.jsx';
 import Footer from './Components/Footer.jsx';
 import { Link } from "react-router-dom";
 import Loading from './Components/Loading.jsx';
+import play from './assets/play-btn.svg';
 
 function App() {
   const [movies, setMovies] = useState([]);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
 
 useEffect(() => {
   getMovies()
@@ -41,7 +42,7 @@ const trending = movies.filter((movie) => movie.vote_average >= 8
   <div key={movie.id} className="Movie-trending">
     <Link to={`/Details/${movie.id}`}>
         <div className="Movie-trending-header">
-            <img src="play-btn.svg" alt="play button" />
+            <img src={play} alt="play button" />
             <div className="Movie-trending-title">
                 <h3 className="Movie-trending-spotlight"> Movie Spotlight </h3>
                 <h2 className="Movie-trending-title-title">{movie.title}</h2>
@@ -56,14 +57,14 @@ const trending = movies.filter((movie) => movie.vote_average >= 8
 
   return (
     <>
-    {loading && <Loading />}
-      <Header />
-      {trending}
-      <h3> Trending </h3>
-      <div className="Movies-div">
-        {moviesList}
-      </div>
-      <Footer />
+        {loading && <Loading />}
+        <Header />
+        {trending}
+        <h3> Trending </h3>
+        <div className="Movies-div">
+            {moviesList}
+        </div>
+        <Footer />
     </>
   );
 }

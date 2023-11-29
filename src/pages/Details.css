@@ -1,5 +1,6 @@
 body{
     color: white;
+    overflow-x: hidden;
 }
 
 .Movie-details-img-global{
@@ -11,7 +12,7 @@ body{
 }
 
 .Movie-details-img{
-    width: 375px;
+    width: 374px;
     height: auto;
 
 }

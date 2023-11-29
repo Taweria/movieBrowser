@@ -4,23 +4,34 @@ import './Details.css';
 import { useParams } from 'react-router-dom';
 import getOneMovie from '../API/GetOneMovie.js';
 import { useState, useEffect } from 'react';
+import Loading from '../Components/Loading.jsx';
+import moment from 'moment';
+import play from '../assets/play-btn.svg';
+import clock from '../assets/clock.svg';
+import star from '../assets/star.svg';
+
 
 export default function Details() {
     const { id } = useParams();
     const [movie, setMovie] = useState([]);
+    const [loading, setLoading] = useState(true);
     
     useEffect(() => {
         getOneMovie(id)
             .then(movie => setMovie(movie))
             .catch(error => console.error('Error fetching movie:', error.message));
     }, [id]);
+
+    useEffect(() => {
+    setTimeout(() => setLoading(false), 500)
+  }, [])
         
 
     const movieDetails = ((movie) => (
         <div key={movie.id} className="Movie-details">
             <div className="Movie-details-img-global">
                 <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt="movie-img" className="Movie-details-img"  />
-                <img src="../play-btn.svg" alt="play button" className="Movie-details-play" />
+                <img src={play} alt="play button" className="Movie-details-play" />
             </div>
             <div className="Movie-details-title-global">
                 <h1 className="Movie-details-title">{movie.title}</h1> 
@@ -28,18 +39,18 @@ export default function Details() {
             </div>
            <div className="Movie-details-rating-note-global">
                 <div className="Movie-details-runtime">
-                    <img src="../clock.svg" alt="clock" />
+                    <img src={clock} alt="clock" />
                     <span>{movie.runtime} minutes</span>
                 </div>
                 <div className="Movie-details-note">
-                    <img src="../star.svg" alt="star" className="Movie-details-star" />
+                    <img src={star} alt="star" className="Movie-details-star" />
                     <span>{movie.vote_average} (IMDb)</span>
                 </div>
            </div>
             <div className="Movie-details-date-genre-global">
                 <div className="Movie-details-date">
                     <h2> Release Date</h2>
-                    <span>{movie.release_date}</span>
+                   <span>{moment(movie.release_date, 'MMMM D, YYYY').format('MMMM D, YYYY')}</span>
                 </div>
                 <div className="Movie-details-genre">
                     <h2>Genre</h2>
@@ -59,6 +70,7 @@ export default function Details() {
 
     return (
         <div>
+        {loading && <Loading />}
             {movieDetails(movie)}
             <Footer />
         </div>
