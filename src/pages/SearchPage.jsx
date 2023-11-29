@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../Components/Header.jsx';
 import Footer from '../Components/Footer.jsx';
 import './SearchPage.css';
-import Searchbar from '../Searchbar.jsx';
+import Searchbar from '../Components/Searchbar.jsx';
 import getMovies from '../API/GetMovies.js';
 import getGenre from '../API/GetGenre.js';
 import { Link } from "react-router-dom";
@@ -31,7 +31,7 @@ function SearchPage() {
     setSelectedGenre(id);
   };
 
-  const moviesList = movies.map((movie) => (
+  const moviesList = (filteredMovies.length > 0 ? filteredMovies : movies).map((movie) => (
     <div key={movie.id} className="Movie-div-list">
       <Link to={`/Details/${movie.id}`}>
         <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt="movies-img" className="Movie-list-img" />
