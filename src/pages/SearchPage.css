@@ -23,6 +23,10 @@
     width: 100%;
 }
 
+.Searchbar-lens{
+    cursor: pointer;
+}
+
 .Movie-div-list-global{
     display: flex;
     flex-direction: row;
@@ -93,6 +97,7 @@ a{
 }
 
 ::-webkit-scrollbar {
+    width: 5px;
     height: 5px;
     border-radius: 10px;
   }

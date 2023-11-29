@@ -6,12 +6,14 @@ import Searchbar from '../Components/Searchbar.jsx';
 import getMovies from '../API/GetMovies.js';
 import getGenre from '../API/GetGenre.js';
 import { Link } from "react-router-dom";
+import Loading from '../Components/Loading.jsx';
 
 function SearchPage() {
-  const [movies, setMovies] = useState([]);
-  const [genres, setGenres] = useState([]);
-  const [filteredMovies, setFilteredMovies] = useState([]);
-  const [selectedGenre, setSelectedGenre] = useState(null);
+const [movies, setMovies] = useState([]);
+const [genres, setGenres] = useState([]);
+const [filteredMovies, setFilteredMovies] = useState([]);
+const [selectedGenre, setSelectedGenre] = useState(null);
+const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     getMovies()
@@ -24,6 +26,10 @@ function SearchPage() {
       .then((genres) => setGenres(genres))
       .catch((error) => console.error('Error fetching genres:', error.message));
   }, []);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 500)
+  }, [])
 
   const genreFilterHandler = (id) => {
     const filteredMovies = movies.filter((movie) => movie.genre_ids.includes(id));
@@ -48,6 +54,7 @@ function SearchPage() {
 
   return (
     <div>
+    {loading && <Loading />}
       <Header />
       <Searchbar />
       <div className="Movie-genre-global">

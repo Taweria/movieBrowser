@@ -4,9 +4,11 @@ import getMovies from './API/GetMovies';
 import Header from './Components/Header.jsx';
 import Footer from './Components/Footer.jsx';
 import { Link } from "react-router-dom";
+import Loading from './Components/Loading.jsx';
 
 function App() {
   const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true)
 
 useEffect(() => {
   getMovies()
@@ -14,6 +16,11 @@ useEffect(() => {
     .catch(error => console.error('Error fetching movies:', error.message));
     
 }, [])
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 500)
+  }, [])
+
 
 
 const moviesList = movies.map((movie) => (
@@ -45,8 +52,11 @@ const trending = movies.filter((movie) => movie.vote_average >= 8
   </div>
 ));
 
+
+
   return (
     <>
+    {loading && <Loading />}
       <Header />
       {trending}
       <h3> Trending </h3>
