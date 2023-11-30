@@ -21,3 +21,7 @@
     overflow: hidden;
     object-fit: cover;
 }
+
+.Movie-search-title{
+   width: 100%;
+}
