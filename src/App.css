@@ -48,11 +48,10 @@ h3{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 355px;
+  height: 354px;
   width: 258px;
   background-color: #fff;
   border-radius: 25px;
-  transition: all 0.3s ease-in-out;
   position: relative;
 }
 
@@ -60,7 +59,6 @@ h3{
   width: 258px;
   height: 359px;
   border-radius: 20px;
-  transition: width .5s;
   overflow: hidden;
   object-fit: cover;
 }
@@ -105,7 +103,6 @@ h3{
 }
 
 .Footer-btn.active svg{
-  /* fill: linear-gradient(200deg, #FF8F71 50%, #ef2c1a 100%); */
   fill: url(#paint0_linear_82_225);
 }
 
@@ -188,7 +185,7 @@ svg{
 }
 
 .Star{
-  color: yellow;
+  color: #f7d22c;
   position: absolute;
   top: 19px;
   right: 58px;

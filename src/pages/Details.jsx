@@ -9,6 +9,8 @@ import moment from 'moment';
 import play from '../assets/play-btn.svg';
 import clock from '../assets/clock.svg';
 import star from '../assets/star.svg';
+import unknown from '../assets/unknown.svg';
+import RelatedMovies from '../Components/RelatedMovies.jsx';
 
 
 export default function Details() {
@@ -30,7 +32,7 @@ export default function Details() {
     const movieDetails = ((movie) => (
         <div key={movie.id} className="Movie-details">
             <div className="Movie-details-img-global">
-                <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt="movie-img" className="Movie-details-img"  />
+                <img src={movie.backdrop_path != null ? `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}` : `${unknown}`} alt="movies-img" className="Movie-details-img"/>
                 <img src={play} alt="play button" className="Movie-details-play" />
             </div>
             <div className="Movie-details-title-global">
@@ -72,6 +74,7 @@ export default function Details() {
         <div>
         {loading && <Loading />}
             {movieDetails(movie)}
+            <RelatedMovies />
             <Footer />
         </div>
     );

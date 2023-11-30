@@ -7,7 +7,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
     position: relative;
 }
 
@@ -103,5 +102,5 @@ body{
 }
 
 .Movie-details-synopsis{
-    margin-bottom: 120px;
+    margin-bottom: 35px;
 }

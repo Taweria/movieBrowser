@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import getMovies from '../API/GetMovies.js';
 import { Link } from "react-router-dom";
 import lens from "../assets/loupe.svg";
+import "./Searchbar.css";
 
 export default function Searchbar() {
     const [searchText, setSearchText] = useState('');
@@ -32,9 +33,9 @@ export default function Searchbar() {
            </div>
         <div className="Searched-group">
         {searchedMovie.map((movie) => (
-        <div key={movie.id} className="Movie-div-list">
+        <div key={movie.id} className="Movie-search-list">
             <Link to={`/Details/${movie.id}`}>
-                <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt="movies-img" className="Movie-list-img" />
+                <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt="movies-img" className="Movie-search-img" />
                 <h2 className="Movie-search-title">{movie.title} <span className="Movie-date"> ({(movie.release_date).split("-")[0]}) </span></h2>
             </Link>
         </div>

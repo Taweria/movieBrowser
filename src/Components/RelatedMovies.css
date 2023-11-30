@@ -1,0 +1,36 @@
+.Movies-related-global{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 25px;
+    margin-top: 30px;
+    width: 100%;
+    margin-bottom: 110px;
+}
+
+.Movies-related-list{
+    width: 45%;
+    text-align: center;
+}
+
+.Movie-related-img{
+    width: 142px;
+    height: 146px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.Movies-related-link{
+    text-decoration: none;
+    color: white;
+}
+
+.Movies-related-link:visited{
+    text-decoration: none;
+    color: white;
+}
+
+.Movie-related-date{
+    font-size: 14px;
+    font-weight: 100;
+}

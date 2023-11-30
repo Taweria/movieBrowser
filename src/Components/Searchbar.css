@@ -1,0 +1,23 @@
+.Searched-group{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+    overflow-x: auto;
+}
+
+.Movie-search-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Movie-search-img{
+    width: 158px;
+    height: 259px;
+    border-radius: 20px;
+    overflow: hidden;
+    object-fit: cover;
+}
