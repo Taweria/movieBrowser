@@ -1,0 +1,15 @@
+.Header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Header-api-icon{
+  width: 80px;
+  height: 80px;
+}
+
+
+.Title-color{
+  color: #FF8F71 !important;
+}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../Components/Header.jsx';
 import Footer from '../Components/Footer.jsx';
-import './SearchPage.css';
+import '../Styles/SearchPage.css';
 import Searchbar from '../Components/Searchbar.jsx';
 import getMovies from '../API/GetMovies.js';
 import getGenre from '../API/GetGenre.js';

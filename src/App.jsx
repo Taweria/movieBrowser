@@ -1,4 +1,4 @@
-import './App.css'
+import './Styles/App.css'
 import { useState, useEffect } from 'react';
 import getMovies from './API/GetMovies';
 import Header from './Components/Header.jsx';

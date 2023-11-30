@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../Components/Footer.jsx';
-import './Details.css';
+import '../Styles/Details.css';
 import { useParams } from 'react-router-dom';
 import getOneMovie from '../API/GetOneMovie.js';
 import { useState, useEffect } from 'react';

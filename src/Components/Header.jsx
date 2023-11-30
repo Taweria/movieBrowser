@@ -1,4 +1,5 @@
 import api from "../assets/api.svg";
+import "../Styles/Header.css";
 
 export default function Header() {
     return (

@@ -1,6 +1,6 @@
 import Header from '../Components/Header.jsx';
 import Footer from '../Components/Footer.jsx';
-import './Profile.css';
+import '../Styles/Profile.css';
 import { useState, useEffect } from 'react';
 import Loading from '../Components/Loading.jsx';
 import heart from '../assets/heart.svg';

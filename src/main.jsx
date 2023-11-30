@@ -4,7 +4,7 @@ import App from './App.jsx'
 import SearchPage from './pages/SearchPage.jsx'
 import ProfilePage from './pages/Profile.jsx'
 import Details from './pages/Details.jsx'
-import './index.css'
+import './Styles/index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NotFound from './pages/NotFound.jsx';
 

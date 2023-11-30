@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import getMovies from '../API/GetMovies.js';
 import { Link } from "react-router-dom";
 import lens from "../assets/loupe.svg";
-import "./Searchbar.css";
+import "../Styles/Searchbar.css";
 import unknown from '../assets/unknown.svg';
 
 export default function Searchbar() {

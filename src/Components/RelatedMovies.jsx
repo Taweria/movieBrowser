@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
-import "./RelatedMovies.css";
+import "../Styles/RelatedMovies.css";
 import getSimilar from '../API/GetSimilar.js';
 import { useParams } from 'react-router-dom';
 import unknown from '../assets/unknown.svg';
