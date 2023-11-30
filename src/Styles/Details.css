@@ -104,3 +104,16 @@ body{
 .Movie-details-synopsis{
     margin-bottom: 35px;
 }
+
+
+@media (min-width: 768px){
+    .Movie-details-img{
+        width: 100%;
+    }
+
+    .Movie-details-play{
+        width: 70px;
+        height: 70px;
+    }
+
+}

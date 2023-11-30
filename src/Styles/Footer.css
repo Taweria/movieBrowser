@@ -9,6 +9,7 @@
   left: 0;
   right: 0;
   background-color: rgb(17, 17, 17);
+  z-index: 4;
 }
 
 .Footer-btn{

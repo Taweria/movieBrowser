@@ -111,3 +111,10 @@
   background: #FF8F71;
   border-radius: 10px;
 }
+
+@media (min-width: 1200px){
+    .Movie-genre-global{
+        align-items: center;
+        justify-content: center;
+    }
+}
