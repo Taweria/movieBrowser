@@ -32,16 +32,16 @@ export default function Searchbar() {
                 <img src={lens} alt="search" onClick={handleSearch}/>
                 <input type="text" className="Searchbar-input" placeholder="Search for a movie..." value={searchText} onChange={handleInputChange} onKeyUp={(e) =>{if (e.key === 'Enter') {handleSearch();}}}/>
            </div>
-        <div className="Searched-group">
-        {searchedMovie.map((movie) => (
-        <div key={movie.id} className="Movie-search-list">
-            <Link to={`/Details/${movie.id}`}>
-                <img src={movie.backdrop_path != null ? `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}` : `${unknown}`} alt="movies-img" className="Movie-search-img"/>
-                <h2 className="Movie-search-title">{movie.title} <span className="Movie-date"> ({(movie.release_date).split("-")[0]}) </span></h2>
-            </Link>
-        </div>
-        ))}
-      </div>
+            <div className="Searched-group">
+            {searchedMovie.map((movie) => (
+                <div key={movie.id} className="Movie-search-list">
+                    <Link to={`/Details/${movie.id}`}>
+                        <img src={movie.backdrop_path != null ? `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}` : `${unknown}`} alt="movies-img" className="Movie-search-img"/>
+                        <h2 className="Movie-search-title">{movie.title} <span className="Movie-date"> ({(movie.release_date).split("-")[0]}) </span></h2>
+                    </Link>
+                </div>
+                ))}
+            </div>
         </div>
     );
 }
